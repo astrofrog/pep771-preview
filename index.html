@@ -113,46 +113,46 @@
 <li><a class="reference internal" href="#packages-supporting-multiple-backends-or-frontends">Packages supporting multiple backends or frontends</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#rationale" style="color: #e08a1e;">Rationale</a></li>
-<li style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;"><a class="reference internal" href="#specification">Specification</a><ul>
+<li><a class="reference internal" href="#rationale">Rationale</a></li>
+<li><a class="reference internal" href="#specification">Specification</a><ul>
 <li><a class="reference internal" href="#default-extra-metadata-field"><code class="docutils literal notranslate"><span class="pre">Default-Extra</span></code> Metadata Field</a></li>
 <li><a class="reference internal" href="#new-key-in-project-metadata-table">New key in <code class="docutils literal notranslate"><span class="pre">[project]</span></code> metadata table</a></li>
-<li><a class="reference internal" href="#overriding-default-extras" style="color: #e08a1e;">Overriding default extras</a></li>
-<li style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;"><a class="reference internal" href="#examples">Examples</a><ul>
-<li><a class="reference internal" href="#recommended-dependencies-and-minimal-installations" style="color: #e08a1e;">Recommended dependencies and minimal installations</a></li>
+<li><a class="reference internal" href="#overriding-default-extras">Overriding default extras</a></li>
+<li><a class="reference internal" href="#examples">Examples</a><ul>
+<li><a class="reference internal" href="#recommended-dependencies-and-minimal-installations">Recommended dependencies and minimal installations</a></li>
 <li><a class="reference internal" href="#packages-requiring-at-least-one-backend-or-frontend">Packages requiring at least one backend or frontend</a></li>
 <li><a class="reference internal" href="#supporting-extras-that-should-not-remove-default-extras">Supporting extras that should not remove default extras</a></li>
-<li><a class="reference internal" href="#packages-with-multiple-kinds-of-defaults" style="color: #e08a1e;">Packages with multiple kinds of defaults</a></li>
-<li style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;"><a class="reference internal" href="#depending-on-packages-with-default-extras" style="color: #e08a1e;">Depending on packages with default extras</a></li>
+<li><a class="reference internal" href="#packages-with-multiple-kinds-of-defaults">Packages with multiple kinds of defaults</a></li>
+<li><a class="reference internal" href="#depending-on-packages-with-default-extras">Depending on packages with default extras</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;"><a class="reference internal" href="#backward-compatibility">Backward Compatibility</a><ul>
+<li><a class="reference internal" href="#backward-compatibility">Backward Compatibility</a><ul>
 <li><a class="reference internal" href="#packages-not-using-default-extras">Packages not using default extras</a></li>
 <li><a class="reference internal" href="#packages-using-default-extras">Packages using default extras</a></li>
-<li style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;"><a class="reference internal" href="#change-in-meaning-of-a-bare-package-name" style="color: #e08a1e;">Change in meaning of a bare package name</a></li>
+<li><a class="reference internal" href="#change-in-meaning-of-a-bare-package-name">Change in meaning of a bare package name</a></li>
 <li><a class="reference internal" href="#packaging-related-tools">Packaging-related tools</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#security-implications">Security Implications</a></li>
-<li style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;"><a class="reference internal" href="#how-to-teach-this">How to teach this</a><ul>
+<li><a class="reference internal" href="#how-to-teach-this">How to teach this</a><ul>
 <li><a class="reference internal" href="#package-end-users">Package end users</a></li>
-<li style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;"><a class="reference internal" href="#package-authors">Package authors</a><ul>
-<li><a class="reference internal" href="#supporting-older-versions-of-package-installers" style="color: #e08a1e;">Supporting older versions of package installers</a></li>
-<li><a class="reference internal" href="#avoiding-the-addition-of-many-default-dependencies" style="color: #e08a1e;">Avoiding the addition of many default dependencies</a></li>
-<li style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;"><a class="reference internal" href="#impact-on-downstream-packages" style="color: #e08a1e;">Impact on downstream packages</a></li>
-<li style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;"><a class="reference internal" href="#default-extras-are-not-a-substitute-for-good-package-design" style="color: #e08a1e;">Default extras are not a substitute for good package design</a></li>
+<li><a class="reference internal" href="#package-authors">Package authors</a><ul>
+<li><a class="reference internal" href="#supporting-older-versions-of-package-installers">Supporting older versions of package installers</a></li>
+<li><a class="reference internal" href="#avoiding-the-addition-of-many-default-dependencies">Avoiding the addition of many default dependencies</a></li>
+<li><a class="reference internal" href="#impact-on-downstream-packages">Impact on downstream packages</a></li>
+<li><a class="reference internal" href="#default-extras-are-not-a-substitute-for-good-package-design">Default extras are not a substitute for good package design</a></li>
 <li><a class="reference internal" href="#inheriting-from-default-extras">Inheriting from default extras</a></li>
 <li><a class="reference internal" href="#incompatible-extras">Incompatible extras</a></li>
 <li><a class="reference internal" href="#circular-dependencies">Circular dependencies</a></li>
-<li><a class="reference internal" href="#documenting-packages-with-default-extras" style="color: #e08a1e;">Documenting packages with default extras</a></li>
+<li><a class="reference internal" href="#documenting-packages-with-default-extras">Documenting packages with default extras</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#packaging-repository-maintainers" style="color: #e08a1e;">Packaging repository maintainers</a></li>
+<li><a class="reference internal" href="#packaging-repository-maintainers">Packaging repository maintainers</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#reference-implementation" style="color: #e08a1e;">Reference Implementation</a></li>
+<li><a class="reference internal" href="#reference-implementation">Reference Implementation</a></li>
 <li><a class="reference internal" href="#rejected-ideas">Rejected Ideas</a><ul>
 <li><a class="reference internal" href="#using-a-meta-package-for-recommended-installations">Using a meta-package for recommended installations</a><ul>
 <li><a class="reference internal" href="#mismatch-between-package-and-module-name">Mismatch between package and module name</a></li>
@@ -641,12 +641,12 @@ this is not specified then explicitly specified extras would disable all default
 extras (consistent with the present PEP).</p>
 </section>
 <section id="depending-on-packages-with-default-extras">
-<h4 style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;"><a class="toc-backref" href="#depending-on-packages-with-default-extras" role="doc-backlink">Depending on packages with default extras</a></h4>
-<p style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;">The examples above focus on packages that <em>define</em> default extras. It is also
+<h4 style="background-color: #d4edda80; border-left: 3px solid #28a745; padding-left: 8px; margin-left: -11px;"><a class="toc-backref" href="#depending-on-packages-with-default-extras" role="doc-backlink">Depending on packages with default extras</a></h4>
+<p style="background-color: #d4edda80; border-left: 3px solid #28a745; padding-left: 8px; margin-left: -11px;">The examples above focus on packages that <em>define</em> default extras. It is also
 useful to illustrate how downstream packages can <em>depend on</em> packages with
 default extras in their <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code>. The following examples assume
 that <code class="docutils literal notranslate"><span class="pre">astropy</span></code> has defined <code class="docutils literal notranslate"><span class="pre">recommended</span></code> as a default extra.</p>
-<p style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;">A downstream package that is happy with the default extras needs no special
+<p style="background-color: #d4edda80; border-left: 3px solid #28a745; padding-left: 8px; margin-left: -11px;">A downstream package that is happy with the default extras needs no special
 syntax:</p>
 <div class="highlight-toml notranslate"><div class="highlight"><pre><span></span><span class="k">[project]</span>
 <span class="n">dependencies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
@@ -654,7 +654,7 @@ syntax:</p>
 <span class="p">]</span>
 </pre></div>
 </div>
-<p style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;">A downstream library that wants only the minimal dependencies can use
+<p style="background-color: #d4edda80; border-left: 3px solid #28a745; padding-left: 8px; margin-left: -11px;">A downstream library that wants only the minimal dependencies can use
 <code class="docutils literal notranslate"><span class="pre">package[]</span></code>:</p>
 <div class="highlight-toml notranslate"><div class="highlight"><pre><span></span><span class="k">[project]</span>
 <span class="n">dependencies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
@@ -662,9 +662,9 @@ syntax:</p>
 <span class="p">]</span>
 </pre></div>
 </div>
-<p style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;">This syntax is backward-compatible: for versions of <code class="docutils literal notranslate"><span class="pre">astropy</span></code> that pre-date
+<p style="background-color: #d4edda80; border-left: 3px solid #28a745; padding-left: 8px; margin-left: -11px;">This syntax is backward-compatible: for versions of <code class="docutils literal notranslate"><span class="pre">astropy</span></code> that pre-date
 the introduction of default extras, <code class="docutils literal notranslate"><span class="pre">astropy[]</span></code> is equivalent to <code class="docutils literal notranslate"><span class="pre">astropy</span></code>.</p>
-<p style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;">A downstream package can also request specific extras, which will override
+<p style="background-color: #d4edda80; border-left: 3px solid #28a745; padding-left: 8px; margin-left: -11px;">A downstream package can also request specific extras, which will override
 the defaults:</p>
 <div class="highlight-toml notranslate"><div class="highlight"><pre><span></span><span class="k">[project]</span>
 <span class="n">dependencies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
@@ -701,13 +701,13 @@ backward-compatibility issues for users, and they are thus responsible for
 ensuring that they minimize the impact to users.</p>
 </section>
 <section id="change-in-meaning-of-a-bare-package-name">
-<h3 style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;"><a class="toc-backref" href="#change-in-meaning-of-a-bare-package-name" role="doc-backlink">Change in meaning of a bare package name</a></h3>
-<p style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;">This PEP changes the meaning of a bare package name (e.g. <code class="docutils literal notranslate"><span class="pre">package</span></code> without
+<h3 style="background-color: #d4edda80; border-left: 3px solid #28a745; padding-left: 8px; margin-left: -11px;"><a class="toc-backref" href="#change-in-meaning-of-a-bare-package-name" role="doc-backlink">Change in meaning of a bare package name</a></h3>
+<p style="background-color: #d4edda80; border-left: 3px solid #28a745; padding-left: 8px; margin-left: -11px;">This PEP changes the meaning of a bare package name (e.g. <code class="docutils literal notranslate"><span class="pre">package</span></code> without
 any extras) for packages that define default extras: prior to this PEP,
 installing <code class="docutils literal notranslate"><span class="pre">package</span></code> would install only the dependencies listed in
 <code class="docutils literal notranslate"><span class="pre">dependencies</span></code>, whereas with this PEP it may additionally install the
 dependencies associated with default extras.</p>
-<p style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;">It is worth noting, however, that in practice the dependencies listed in
+<p style="background-color: #d4edda80; border-left: 3px solid #28a745; padding-left: 8px; margin-left: -11px;">It is worth noting, however, that in practice the dependencies listed in
 <code class="docutils literal notranslate"><span class="pre">dependencies</span></code> have never strictly represented a minimal set. Package authors
 have always had full discretion over what to include in <code class="docutils literal notranslate"><span class="pre">dependencies</span></code>, and
 many packages include dependencies in <code class="docutils literal notranslate"><span class="pre">dependencies</span></code> that are not strictly
@@ -717,7 +717,7 @@ opt out of such dependencies. This PEP provides a way for authors to separate
 truly required dependencies from recommended-but-optional ones, and introduces
 <code class="docutils literal notranslate"><span class="pre">package[]</span></code> as a standardized, universal way to obtain a minimal installation
 – something that does not exist today.</p>
-<p style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;">This PEP is also opt-in: no existing package changes behavior until its
+<p style="background-color: #d4edda80; border-left: 3px solid #28a745; padding-left: 8px; margin-left: -11px;">This PEP is also opt-in: no existing package changes behavior until its
 maintainer explicitly adds default extras, which is no different in nature from
 other metadata changes authors routinely make, such as adding or removing
 required dependencies.</p>
@@ -868,21 +868,21 @@ dependency tree can opt out of specific upstream default extras on a per-package
 basis using <code class="docutils literal notranslate"><span class="pre">package[]</span></code>, which limits the compounding effect.</p>
 </section>
 <section id="impact-on-downstream-packages">
-<h4 style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;"><a class="toc-backref" href="#impact-on-downstream-packages" role="doc-backlink">Impact on downstream packages</a></h4>
-<p style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;">When a dependency adopts default extras, downstream packages that depend on it
+<h4 style="background-color: #d4edda80; border-left: 3px solid #28a745; padding-left: 8px; margin-left: -11px;"><a class="toc-backref" href="#impact-on-downstream-packages" role="doc-backlink">Impact on downstream packages</a></h4>
+<p style="background-color: #d4edda80; border-left: 3px solid #28a745; padding-left: 8px; margin-left: -11px;">When a dependency adopts default extras, downstream packages that depend on it
 will receive additional dependencies. Authors of downstream packages should be
 aware of this possibility and can respond in several ways:</p>
 <ul class="simple">
-<li style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;">If the additional dependencies are acceptable, no action is needed.</li>
-<li style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;">If a minimal dependency footprint is desired, the downstream package can
+<li style="background-color: #d4edda80; border-left: 3px solid #28a745; padding-left: 8px; margin-left: -11px;">If the additional dependencies are acceptable, no action is needed.</li>
+<li style="background-color: #d4edda80; border-left: 3px solid #28a745; padding-left: 8px; margin-left: -11px;">If a minimal dependency footprint is desired, the downstream package can
 depend on <code class="docutils literal notranslate"><span class="pre">package[]</span></code> to receive only the required dependencies. This
 syntax is backward-compatible: for versions of the upstream package that
 pre-date default extras, <code class="docutils literal notranslate"><span class="pre">package[]</span></code> is equivalent to <code class="docutils literal notranslate"><span class="pre">package</span></code>.</li>
-<li style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;">If specific extras are needed, the downstream package can depend on
+<li style="background-color: #d4edda80; border-left: 3px solid #28a745; padding-left: 8px; margin-left: -11px;">If specific extras are needed, the downstream package can depend on
 <code class="docutils literal notranslate"><span class="pre">package[specific-extra]</span></code>, which as with any explicitly specified extra
 will override the default extras.</li>
 </ul>
-<p style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;">Downstream packages that define their own extras may also need to consider
+<p style="background-color: #d4edda80; border-left: 3px solid #28a745; padding-left: 8px; margin-left: -11px;">Downstream packages that define their own extras may also need to consider
 how those extras interact with upstream default extras. For instance, if a
 downstream package offers both a <code class="docutils literal notranslate"><span class="pre">full</span></code> and <code class="docutils literal notranslate"><span class="pre">minimal</span></code> extra, the author
 will need to decide whether the <code class="docutils literal notranslate"><span class="pre">minimal</span></code> extra should depend on
@@ -890,7 +890,7 @@ will need to decide whether the <code class="docutils literal notranslate"><span
 whether both should use the same form. This is a new consideration introduced
 by this PEP, but is similar in nature to decisions downstream authors already
 make when upstream packages add or reorganize their own extras.</p>
-<p style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;">Note that if different downstream packages make different choices — for
+<p style="background-color: #d4edda80; border-left: 3px solid #28a745; padding-left: 8px; margin-left: -11px;">Note that if different downstream packages make different choices — for
 example, one depending on <code class="docutils literal notranslate"><span class="pre">upstream[]</span></code> and another on <code class="docutils literal notranslate"><span class="pre">upstream</span></code> — the
 default extras will be installed if any instance of the package appears
 without extras in the dependency tree (as described in
@@ -899,12 +899,12 @@ semantics for extras: <code class="docutils literal notranslate"><span class="pr
 defaults” rather than “I forbid the defaults.”</p>
 </section>
 <section id="default-extras-are-not-a-substitute-for-good-package-design">
-<h4 style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;"><a class="toc-backref" href="#default-extras-are-not-a-substitute-for-good-package-design" role="doc-backlink">Default extras are not a substitute for good package design</a></h4>
-<p style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;">A concern that has been raised during the discussion of this PEP is that default
+<h4 style="background-color: #d4edda80; border-left: 3px solid #28a745; padding-left: 8px; margin-left: -11px;"><a class="toc-backref" href="#default-extras-are-not-a-substitute-for-good-package-design" role="doc-backlink">Default extras are not a substitute for good package design</a></h4>
+<p style="background-color: #d4edda80; border-left: 3px solid #28a745; padding-left: 8px; margin-left: -11px;">A concern that has been raised during the discussion of this PEP is that default
 extras might discourage authors from properly structuring their code into
 well-scoped packages — for example, by using a default extra to bundle unrelated
 functionality together rather than distributing it as a separate package.</p>
-<p style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;">Default extras are not intended to replace good package design. They are a
+<p style="background-color: #d4edda80; border-left: 3px solid #28a745; padding-left: 8px; margin-left: -11px;">Default extras are not intended to replace good package design. They are a
 mechanism for expressing the author’s intent about what a typical installation
 should include, in cases where the boundary between “required” and “optional”
 is genuinely ambiguous. A package whose components are truly independent and
@@ -913,7 +913,7 @@ separate packages. Default extras are most appropriate when a package is
 conceptually one thing but has optional components that most users want — such
 as recommended performance or convenience dependencies, or a default backend
 for a package that supports multiple backends.</p>
-<p style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;">The alternative approach of splitting packages into a core package and a
+<p style="background-color: #d4edda80; border-left: 3px solid #28a745; padding-left: 8px; margin-left: -11px;">The alternative approach of splitting packages into a core package and a
 meta-package is discussed in detail in <a class="reference internal" href="#using-a-meta-package-for-recommended-installations">Using a meta-package for recommended
 installations</a>, along with the reasons it is not considered a compelling
 alternative.</p>
@@ -992,7 +992,7 @@ extras that should not remove default extras</a>)</li>
 <li>any instructions specific to packages that might have e.g. default backends
 <em>and</em> frontends (as described in <a class="reference internal" href="#packages-with-multiple-kinds-of-defaults">Packages with multiple kinds of defaults</a>)</li>
 </ul>
-<p style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;">It is also recommended that packages using default extras include a continuous integration (CI) job
+<p style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;">It is also recommended that packages using default extras include a CI job
 that performs a minimal installation (without default extras) and verifies
 that core functionality still works. This helps ensure that the package does
 not accidentally rely on default extra dependencies for functionality that
@@ -1326,17 +1326,17 @@ CC0-1.0-Universal license, whichever is more permissive.</p>
 <li><a class="reference internal" href="#packages-supporting-multiple-backends-or-frontends">Packages supporting multiple backends or frontends</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#rationale">Rationale</a></li>
+<li><a class="reference internal" href="#rationale" style="color: #e08a1e;">Rationale</a></li>
 <li><a class="reference internal" href="#specification">Specification</a><ul>
 <li><a class="reference internal" href="#default-extra-metadata-field"><code class="docutils literal notranslate"><span class="pre">Default-Extra</span></code> Metadata Field</a></li>
 <li><a class="reference internal" href="#new-key-in-project-metadata-table">New key in <code class="docutils literal notranslate"><span class="pre">[project]</span></code> metadata table</a></li>
-<li><a class="reference internal" href="#overriding-default-extras">Overriding default extras</a></li>
+<li><a class="reference internal" href="#overriding-default-extras" style="color: #e08a1e;">Overriding default extras</a></li>
 <li><a class="reference internal" href="#examples">Examples</a><ul>
-<li><a class="reference internal" href="#recommended-dependencies-and-minimal-installations">Recommended dependencies and minimal installations</a></li>
+<li><a class="reference internal" href="#recommended-dependencies-and-minimal-installations" style="color: #e08a1e;">Recommended dependencies and minimal installations</a></li>
 <li><a class="reference internal" href="#packages-requiring-at-least-one-backend-or-frontend">Packages requiring at least one backend or frontend</a></li>
 <li><a class="reference internal" href="#supporting-extras-that-should-not-remove-default-extras">Supporting extras that should not remove default extras</a></li>
-<li><a class="reference internal" href="#packages-with-multiple-kinds-of-defaults">Packages with multiple kinds of defaults</a></li>
-<li><a class="reference internal" href="#depending-on-packages-with-default-extras">Depending on packages with default extras</a></li>
+<li><a class="reference internal" href="#packages-with-multiple-kinds-of-defaults" style="color: #e08a1e;">Packages with multiple kinds of defaults</a></li>
+<li><a class="reference internal" href="#depending-on-packages-with-default-extras" style="color: #28a745;">Depending on packages with default extras</a></li>
 </ul>
 </li>
 </ul>
@@ -1344,7 +1344,7 @@ CC0-1.0-Universal license, whichever is more permissive.</p>
 <li><a class="reference internal" href="#backward-compatibility">Backward Compatibility</a><ul>
 <li><a class="reference internal" href="#packages-not-using-default-extras">Packages not using default extras</a></li>
 <li><a class="reference internal" href="#packages-using-default-extras">Packages using default extras</a></li>
-<li><a class="reference internal" href="#change-in-meaning-of-a-bare-package-name">Change in meaning of a bare package name</a></li>
+<li><a class="reference internal" href="#change-in-meaning-of-a-bare-package-name" style="color: #28a745;">Change in meaning of a bare package name</a></li>
 <li><a class="reference internal" href="#packaging-related-tools">Packaging-related tools</a></li>
 </ul>
 </li>
@@ -1352,20 +1352,20 @@ CC0-1.0-Universal license, whichever is more permissive.</p>
 <li><a class="reference internal" href="#how-to-teach-this">How to teach this</a><ul>
 <li><a class="reference internal" href="#package-end-users">Package end users</a></li>
 <li><a class="reference internal" href="#package-authors">Package authors</a><ul>
-<li><a class="reference internal" href="#supporting-older-versions-of-package-installers">Supporting older versions of package installers</a></li>
-<li><a class="reference internal" href="#avoiding-the-addition-of-many-default-dependencies">Avoiding the addition of many default dependencies</a></li>
-<li><a class="reference internal" href="#impact-on-downstream-packages">Impact on downstream packages</a></li>
-<li><a class="reference internal" href="#default-extras-are-not-a-substitute-for-good-package-design">Default extras are not a substitute for good package design</a></li>
+<li><a class="reference internal" href="#supporting-older-versions-of-package-installers" style="color: #e08a1e;">Supporting older versions of package installers</a></li>
+<li><a class="reference internal" href="#avoiding-the-addition-of-many-default-dependencies" style="color: #e08a1e;">Avoiding the addition of many default dependencies</a></li>
+<li><a class="reference internal" href="#impact-on-downstream-packages" style="color: #28a745;">Impact on downstream packages</a></li>
+<li><a class="reference internal" href="#default-extras-are-not-a-substitute-for-good-package-design" style="color: #28a745;">Default extras are not a substitute for good package design</a></li>
 <li><a class="reference internal" href="#inheriting-from-default-extras">Inheriting from default extras</a></li>
 <li><a class="reference internal" href="#incompatible-extras">Incompatible extras</a></li>
 <li><a class="reference internal" href="#circular-dependencies">Circular dependencies</a></li>
-<li><a class="reference internal" href="#documenting-packages-with-default-extras">Documenting packages with default extras</a></li>
+<li><a class="reference internal" href="#documenting-packages-with-default-extras" style="color: #e08a1e;">Documenting packages with default extras</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#packaging-repository-maintainers">Packaging repository maintainers</a></li>
+<li><a class="reference internal" href="#packaging-repository-maintainers" style="color: #e08a1e;">Packaging repository maintainers</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#reference-implementation">Reference Implementation</a></li>
+<li><a class="reference internal" href="#reference-implementation" style="color: #e08a1e;">Reference Implementation</a></li>
 <li><a class="reference internal" href="#rejected-ideas">Rejected Ideas</a><ul>
 <li><a class="reference internal" href="#using-a-meta-package-for-recommended-installations">Using a meta-package for recommended installations</a><ul>
 <li><a class="reference internal" href="#mismatch-between-package-and-module-name">Mismatch between package and module name</a></li>
