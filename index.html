@@ -114,35 +114,35 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#rationale" style="color: #e08a1e;">Rationale</a></li>
-<li><a class="reference internal" href="#specification">Specification</a><ul>
+<li style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;"><a class="reference internal" href="#specification">Specification</a><ul>
 <li><a class="reference internal" href="#default-extra-metadata-field"><code class="docutils literal notranslate"><span class="pre">Default-Extra</span></code> Metadata Field</a></li>
 <li><a class="reference internal" href="#new-key-in-project-metadata-table">New key in <code class="docutils literal notranslate"><span class="pre">[project]</span></code> metadata table</a></li>
 <li><a class="reference internal" href="#overriding-default-extras" style="color: #e08a1e;">Overriding default extras</a></li>
-<li><a class="reference internal" href="#examples">Examples</a><ul>
+<li style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;"><a class="reference internal" href="#examples">Examples</a><ul>
 <li><a class="reference internal" href="#recommended-dependencies-and-minimal-installations" style="color: #e08a1e;">Recommended dependencies and minimal installations</a></li>
 <li><a class="reference internal" href="#packages-requiring-at-least-one-backend-or-frontend">Packages requiring at least one backend or frontend</a></li>
 <li><a class="reference internal" href="#supporting-extras-that-should-not-remove-default-extras">Supporting extras that should not remove default extras</a></li>
 <li><a class="reference internal" href="#packages-with-multiple-kinds-of-defaults" style="color: #e08a1e;">Packages with multiple kinds of defaults</a></li>
-<li><a class="reference internal" href="#depending-on-packages-with-default-extras" style="color: #e08a1e;">Depending on packages with default extras</a></li>
+<li style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;"><a class="reference internal" href="#depending-on-packages-with-default-extras" style="color: #e08a1e;">Depending on packages with default extras</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#backward-compatibility">Backward Compatibility</a><ul>
+<li style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;"><a class="reference internal" href="#backward-compatibility">Backward Compatibility</a><ul>
 <li><a class="reference internal" href="#packages-not-using-default-extras">Packages not using default extras</a></li>
 <li><a class="reference internal" href="#packages-using-default-extras">Packages using default extras</a></li>
-<li><a class="reference internal" href="#change-in-meaning-of-a-bare-package-name" style="color: #e08a1e;">Change in meaning of a bare package name</a></li>
+<li style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;"><a class="reference internal" href="#change-in-meaning-of-a-bare-package-name" style="color: #e08a1e;">Change in meaning of a bare package name</a></li>
 <li><a class="reference internal" href="#packaging-related-tools">Packaging-related tools</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#security-implications">Security Implications</a></li>
-<li><a class="reference internal" href="#how-to-teach-this">How to teach this</a><ul>
+<li style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;"><a class="reference internal" href="#how-to-teach-this">How to teach this</a><ul>
 <li><a class="reference internal" href="#package-end-users">Package end users</a></li>
-<li><a class="reference internal" href="#package-authors">Package authors</a><ul>
+<li style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;"><a class="reference internal" href="#package-authors">Package authors</a><ul>
 <li><a class="reference internal" href="#supporting-older-versions-of-package-installers" style="color: #e08a1e;">Supporting older versions of package installers</a></li>
 <li><a class="reference internal" href="#avoiding-the-addition-of-many-default-dependencies" style="color: #e08a1e;">Avoiding the addition of many default dependencies</a></li>
-<li><a class="reference internal" href="#impact-on-downstream-packages" style="color: #e08a1e;">Impact on downstream packages</a></li>
-<li><a class="reference internal" href="#default-extras-are-not-a-substitute-for-good-package-design" style="color: #e08a1e;">Default extras are not a substitute for good package design</a></li>
+<li style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;"><a class="reference internal" href="#impact-on-downstream-packages" style="color: #e08a1e;">Impact on downstream packages</a></li>
+<li style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;"><a class="reference internal" href="#default-extras-are-not-a-substitute-for-good-package-design" style="color: #e08a1e;">Default extras are not a substitute for good package design</a></li>
 <li><a class="reference internal" href="#inheriting-from-default-extras">Inheriting from default extras</a></li>
 <li><a class="reference internal" href="#incompatible-extras">Incompatible extras</a></li>
 <li><a class="reference internal" href="#circular-dependencies">Circular dependencies</a></li>
@@ -263,7 +263,7 @@ a core package and a meta-package (discussed in detail in <a class="reference in
 for recommended installations</a>) — can technically achieve similar outcomes but
 imposes a significant and ongoing maintenance burden, introduces user-facing
 issues such as naming mismatches and unintuitive uninstallation behavior, and has
-proven impractical enough that most projects have chosen not to adopt it.</p>
+proven impractical enough that many projects have chosen not to adopt it.</p>
 <p style="background-color: #f0ad4e30; border-left: 3px solid #e08a1e; padding-left: 8px; margin-left: -11px;">The concept of default-but-optional dependencies has prior art in other
 ecosystems. Linux distributions such as Debian/Ubuntu and Fedora have long
 distinguished between required (<code class="docutils literal notranslate"><span class="pre">Depends</span></code>) and recommended (<code class="docutils literal notranslate"><span class="pre">Recommends</span></code>)
@@ -1326,17 +1326,17 @@ CC0-1.0-Universal license, whichever is more permissive.</p>
 <li><a class="reference internal" href="#packages-supporting-multiple-backends-or-frontends">Packages supporting multiple backends or frontends</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#rationale" style="color: #e08a1e;">Rationale</a></li>
+<li><a class="reference internal" href="#rationale">Rationale</a></li>
 <li><a class="reference internal" href="#specification">Specification</a><ul>
 <li><a class="reference internal" href="#default-extra-metadata-field"><code class="docutils literal notranslate"><span class="pre">Default-Extra</span></code> Metadata Field</a></li>
 <li><a class="reference internal" href="#new-key-in-project-metadata-table">New key in <code class="docutils literal notranslate"><span class="pre">[project]</span></code> metadata table</a></li>
-<li><a class="reference internal" href="#overriding-default-extras" style="color: #e08a1e;">Overriding default extras</a></li>
+<li><a class="reference internal" href="#overriding-default-extras">Overriding default extras</a></li>
 <li><a class="reference internal" href="#examples">Examples</a><ul>
-<li><a class="reference internal" href="#recommended-dependencies-and-minimal-installations" style="color: #e08a1e;">Recommended dependencies and minimal installations</a></li>
+<li><a class="reference internal" href="#recommended-dependencies-and-minimal-installations">Recommended dependencies and minimal installations</a></li>
 <li><a class="reference internal" href="#packages-requiring-at-least-one-backend-or-frontend">Packages requiring at least one backend or frontend</a></li>
 <li><a class="reference internal" href="#supporting-extras-that-should-not-remove-default-extras">Supporting extras that should not remove default extras</a></li>
-<li><a class="reference internal" href="#packages-with-multiple-kinds-of-defaults" style="color: #e08a1e;">Packages with multiple kinds of defaults</a></li>
-<li><a class="reference internal" href="#depending-on-packages-with-default-extras" style="color: #e08a1e;">Depending on packages with default extras</a></li>
+<li><a class="reference internal" href="#packages-with-multiple-kinds-of-defaults">Packages with multiple kinds of defaults</a></li>
+<li><a class="reference internal" href="#depending-on-packages-with-default-extras">Depending on packages with default extras</a></li>
 </ul>
 </li>
 </ul>
@@ -1344,7 +1344,7 @@ CC0-1.0-Universal license, whichever is more permissive.</p>
 <li><a class="reference internal" href="#backward-compatibility">Backward Compatibility</a><ul>
 <li><a class="reference internal" href="#packages-not-using-default-extras">Packages not using default extras</a></li>
 <li><a class="reference internal" href="#packages-using-default-extras">Packages using default extras</a></li>
-<li><a class="reference internal" href="#change-in-meaning-of-a-bare-package-name" style="color: #e08a1e;">Change in meaning of a bare package name</a></li>
+<li><a class="reference internal" href="#change-in-meaning-of-a-bare-package-name">Change in meaning of a bare package name</a></li>
 <li><a class="reference internal" href="#packaging-related-tools">Packaging-related tools</a></li>
 </ul>
 </li>
@@ -1352,20 +1352,20 @@ CC0-1.0-Universal license, whichever is more permissive.</p>
 <li><a class="reference internal" href="#how-to-teach-this">How to teach this</a><ul>
 <li><a class="reference internal" href="#package-end-users">Package end users</a></li>
 <li><a class="reference internal" href="#package-authors">Package authors</a><ul>
-<li><a class="reference internal" href="#supporting-older-versions-of-package-installers" style="color: #e08a1e;">Supporting older versions of package installers</a></li>
-<li><a class="reference internal" href="#avoiding-the-addition-of-many-default-dependencies" style="color: #e08a1e;">Avoiding the addition of many default dependencies</a></li>
-<li><a class="reference internal" href="#impact-on-downstream-packages" style="color: #e08a1e;">Impact on downstream packages</a></li>
-<li><a class="reference internal" href="#default-extras-are-not-a-substitute-for-good-package-design" style="color: #e08a1e;">Default extras are not a substitute for good package design</a></li>
+<li><a class="reference internal" href="#supporting-older-versions-of-package-installers">Supporting older versions of package installers</a></li>
+<li><a class="reference internal" href="#avoiding-the-addition-of-many-default-dependencies">Avoiding the addition of many default dependencies</a></li>
+<li><a class="reference internal" href="#impact-on-downstream-packages">Impact on downstream packages</a></li>
+<li><a class="reference internal" href="#default-extras-are-not-a-substitute-for-good-package-design">Default extras are not a substitute for good package design</a></li>
 <li><a class="reference internal" href="#inheriting-from-default-extras">Inheriting from default extras</a></li>
 <li><a class="reference internal" href="#incompatible-extras">Incompatible extras</a></li>
 <li><a class="reference internal" href="#circular-dependencies">Circular dependencies</a></li>
-<li><a class="reference internal" href="#documenting-packages-with-default-extras" style="color: #e08a1e;">Documenting packages with default extras</a></li>
+<li><a class="reference internal" href="#documenting-packages-with-default-extras">Documenting packages with default extras</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#packaging-repository-maintainers" style="color: #e08a1e;">Packaging repository maintainers</a></li>
+<li><a class="reference internal" href="#packaging-repository-maintainers">Packaging repository maintainers</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#reference-implementation" style="color: #e08a1e;">Reference Implementation</a></li>
+<li><a class="reference internal" href="#reference-implementation">Reference Implementation</a></li>
 <li><a class="reference internal" href="#rejected-ideas">Rejected Ideas</a><ul>
 <li><a class="reference internal" href="#using-a-meta-package-for-recommended-installations">Using a meta-package for recommended installations</a><ul>
 <li><a class="reference internal" href="#mismatch-between-package-and-module-name">Mismatch between package and module name</a></li>
